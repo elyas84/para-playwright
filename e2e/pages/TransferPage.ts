@@ -63,15 +63,6 @@ export class TransferPage extends BaseBage {
 
   async goToAccountOverViewPage() {
     await Logger.STEP("go to open new account", async () => {
-      // for (let i = 0; i < (await this.account_service_menuItems.count()); i++) {
-      //   if (
-      //     (await this.getText(this.account_service_menuItems.nth(i))) ===
-      //     Account_Service_Menu_items.ACCOUNT_OVERVIEW
-      //   ) {
-      //     await this.click(this.account_service_menuItems.nth(i));
-      //     break;
-      //   }
-      // }
       await this.click(this.overView_accountLink);
     });
   }

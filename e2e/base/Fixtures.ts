@@ -27,6 +27,7 @@ export const test = base.extend<fixtures>({
       throw new Error();
     } else {
       await page.goto(URL, { waitUntil: "domcontentloaded" });
+      await page.waitForTimeout(2000);
     }
     const homePage = new HomePage({ page });
     homePage.verifyHomePageVisibility();

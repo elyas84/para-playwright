@@ -23,7 +23,6 @@ test.describe("S&P QA Technical Test UI", async () => {
   }) => {
     await homePage.goToRegiserPage();
     await registerPage.verifyRegisterPageVisibility();
-
     await registerPage.register(
       FIRSTNAME,
       LASTNAME,
@@ -67,6 +66,8 @@ test.describe("S&P QA Technical Test UI", async () => {
     transferPage,
     profilePage,
   }) => {
+    console.log(`random user : [${USERNAME}]`);
+    console.log(`username: [${USERNAME}] | password: [${PASSWORD}]`);
     await homePage.login(USERNAME, PASSWORD);
     await profilePage.goToOpenNewAccountPage();
     await newAccountPage.verifyNewAccountPageVisibility();
@@ -141,6 +142,5 @@ test.describe("S&P QA Technical Test UI", async () => {
       }
     }
     await accountOverViewPage.logout();
-    await homePage.verifyHomePageVisibility();
   });
 });

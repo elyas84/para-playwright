@@ -126,7 +126,7 @@ export class NewAccountPage extends BaseBage {
    */
 
   async goToAccountOverViewPage() {
-    await Logger.STEP("", async () => {
+    await Logger.STEP("go to accout overview page", async () => {
       for (let i = 0; i < (await this.account_service_menuItems.count()); i++) {
         if (
           (await this.getText(this.account_service_menuItems.nth(i))) ===

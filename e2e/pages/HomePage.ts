@@ -59,7 +59,9 @@ export class HomePage extends BaseBage {
   async login(username: string, password: string) {
     await Logger.STEP("Perform login", async () => {
       await this.sendText(this.username_input, username);
+      await this.waitForSecond(1);
       await this.sendText(this.password_input, password);
+      await this.waitForSecond(1);
       await this.click(this.login_button);
       expect(this.errorMsg).not.toBeVisible();
       await this.waitForSecond(2);

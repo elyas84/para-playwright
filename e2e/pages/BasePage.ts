@@ -151,6 +151,9 @@ export abstract class BaseBage {
     await Logger.STEP("Logout", async () => {
       await this.waitForSecond(2);
       for (let i = 0; i < (await this.account_service_menuItems.count()); i++) {
+        await this.verifyLocatorVisibility(
+          this.account_service_menuItems.nth(i)
+        );
         if (
           (await this.getText(this.account_service_menuItems.nth(i))) ===
           Account_Service_Menu_items.LOGOUT
