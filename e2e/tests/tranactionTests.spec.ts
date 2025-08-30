@@ -141,5 +141,6 @@ test.describe("S&P QA Technical Test UI", async () => {
       }
     }
     await accountOverViewPage.logout();
+    await homePage.verifyHomePageVisibility();
   });
 });
