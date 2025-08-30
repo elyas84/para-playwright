@@ -21,7 +21,8 @@ type fixtures = {
 export const test = base.extend<fixtures>({
   page: async ({ page }, use, testStatus) => {
     console.log(`======== TEST SETUP =======`);
-    let URL = process.env.APP_URL;
+    // MAKE SURE YOU RUN NPM I AND CREATE A ENV FILE
+    let URL = process.env.APP_URL; // https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC
     if (!URL) {
       throw new Error();
     } else {
