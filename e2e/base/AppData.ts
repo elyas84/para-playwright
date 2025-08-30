@@ -8,7 +8,7 @@ export const PHONE = "7894561230";
 export const SSN = "123-45-6789";
 export const PASSWORD = "123test!";
 export const CONFIRM = "123test!";
-export const USERNAME = "user_73";
+// export const USERNAME = "user_73";
 
 // let updatedUser = {
 //   firstname: "Niko_02",

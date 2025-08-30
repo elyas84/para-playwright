@@ -8,10 +8,12 @@ import {
   PHONE,
   SSN,
   STATE,
-  USERNAME,
   ZIP,
 } from "../base/AppData";
 import { test } from "../base/Fixtures";
+
+let USERNAME_Random = Math.floor(Math.random() * 100000) + 1;
+let USERNAME = "mytest_account_" + USERNAME_Random;
 
 test.describe("S&P QA Technical Test UI", async () => {
   test("Flow 1 | Registration", async ({
@@ -21,6 +23,7 @@ test.describe("S&P QA Technical Test UI", async () => {
   }) => {
     await homePage.goToRegiserPage();
     await registerPage.verifyRegisterPageVisibility();
+
     await registerPage.register(
       FIRSTNAME,
       LASTNAME,
